@@ -1,0 +1,41 @@
+{
+  "name": "kotodama-nwsl0001",
+  "main": "svelte/.svelte-kit/cloudflare/_worker.js",
+  "compatibility_date": "2025-03-17",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "nodejs_als"
+  ],
+  "vars": {
+    "APP_ACTOR_HANDLE": "newsletter",
+    "APP_CAPABILITIES": "null",
+    "APP_DESCRIPTION": "AI newsletter factory. Curates content from news.etzhayyim.com and narou.etzhayyim.com, personalizes per cohort, and delivers via Resend every Tuesday.",
+    "APP_DISPLAY_NAME": "etzhayyim Newsletter",
+    "APP_EMBED_URL": "https://nwsl0001.etzhayyim.com/?embed=1",
+    "APP_FRAMEWORK": "sveltekit-edge-bff",
+    "APP_NANOID": "nwsl0001",
+    "APP_PERFORMER_TYPE": "",
+    "APP_UI_TYPE": "appview",
+    "AGENTGATEWAY_MCP_ROUTER_URL": "https://mcp.etzhayyim.com/xrpc/com.etzhayyim.mcp.message"
+  },
+  "rules": [
+    {
+      "type": "CompiledWasm",
+      "globs": [
+        "**/*.wasm"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "nwsl0001.etzhayyim.com/*",
+      "zone_name": "etzhayyim.com"
+    }
+  ],
+  "assets": {
+    "directory": "./svelte/.svelte-kit/cloudflare/client",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  }
+}

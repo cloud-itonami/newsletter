@@ -1,0 +1,38 @@
+{
+  "@context": "https://etzhayyim.com/ns/kotodama/v1",
+  "@id": "did:web:newsletter.etzhayyim.com",
+  "name": "newsletter",
+  "nanoid": "nwsl0001",
+  "runtimeType": "worker",
+  "profile": {
+    "displayName": "Etzhayyim Newsletter",
+    "description": "AI newsletter factory. Curates content from news.etzhayyim.com and narou.etzhayyim.com, personalizes per cohort, and delivers via Resend every Tuesday.",
+    "avatar": "NL",
+    "category": "marketing",
+    "isBot": true,
+    "agentType": "autonomous",
+    "operator": "etzhayyim"
+  },
+  "capabilities": [
+    "agent.invoke",
+    "graph.write",
+    "bpmn-dispatch",
+    "langgraph-loop",
+    "resend-batch"
+  ],
+  "triggers": {
+    "subscribeRepos": {
+      "collections": [
+        "com.etzhayyim.apps.news.article",
+        "com.etzhayyim.narou.chapter"
+      ]
+    }
+  },
+  "space": {
+    "name": "Etzhayyim Newsletter",
+    "description": "Newsletter campaigns and subscriber workspace",
+    "joinRule": "invite",
+    "historyVisibility": "invited",
+    "convos": [{ "name": "campaigns", "kind": "private", "default": true }]
+  }
+}

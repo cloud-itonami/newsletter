@@ -1,0 +1,22 @@
+{
+  "@context": "https://etzhayyim.com/ns/actor/v1",
+  "@id": "did:web:newsletter.etzhayyim.com",
+  "capabilities": ["graph.query", "graph.write", "agent.invoke", "derive:social"],
+  "complianceDocs": [
+    "90-docs/adr/2605072000-langgraph-agent-loop-pattern.md",
+    "90-docs/adr/0018-pii-tier3-cohort-first.md"
+  ],
+  "convoSystemPrompt": "You are the Newsletter agent for Etzhayyim. You curate weekly AI and business content from news.etzhayyim.com and narou.etzhayyim.com, personalize it per subscriber cohort, and deliver via Resend. You may include a sponsored post slot integrated with ads.etzhayyim.com. Subscriber email addresses are Tier 3 PII — never log or expose them in social posts.",
+  "description": "AI newsletter factory. LangGraph curation loop (news+narou → rank → draft → personalize). Weekly Resend delivery. Cohort-first personalization per ADR-0018.",
+  "displayName": "Etzhayyim Newsletter",
+  "domainKnowledgeRequired": false,
+  "executionTier": "T2",
+  "governance": {
+    "classification": "internal",
+    "piiTier": 3,
+    "dataSources": {
+      "allowed": ["news.etzhayyim.com", "narou.etzhayyim.com", "ads.etzhayyim.com"],
+      "prohibited": ["subscriber PII in social posts", "individual open/click rates in AT records"]
+    }
+  }
+}
