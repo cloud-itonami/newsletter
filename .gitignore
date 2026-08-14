@@ -1,0 +1,7 @@
+# docs/operator-quickstart.md の手順は kotoba/node_modules を作る。
+# それで repo が dirty にならないようにする。
+node_modules/
+
+# appview のビルド生成物（wrangler.jsonc の main が指す先）
+.svelte-kit/
+dist/
