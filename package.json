@@ -1,0 +1,12 @@
+{
+  "name": "newsletter",
+  "version": "1.0.0",
+  "description": "Public newsletter issue archive appview — issue and section records surfaced as read-only archive views (appview UI: shadow-cljs + reagent + kotoba-ui)",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "type": "module",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
