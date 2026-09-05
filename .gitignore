@@ -1,7 +1,11 @@
 # docs/operator-quickstart.md の手順は kotoba/node_modules を作る。
 # それで repo が dirty にならないようにする。
 node_modules/
+package-lock.json
 
-# appview のビルド生成物（wrangler.jsonc の main が指す先）
-.svelte-kit/
+# shadow-cljs / deps.edn のビルド生成物（.gitignore 済みで追跡しない）
+.shadow-cljs/
+.cpcache/
+
+# appview のビルド生成物
 dist/
