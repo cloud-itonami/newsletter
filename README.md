@@ -38,7 +38,7 @@ kotoba/                     ← 正本。TS 参照実装（テストが在るの
 appview/newsletter-nwsl0001/ ← CF Worker + SvelteKit の scaffold（下記の注意）
 actor-manifest.jsonld        ← actor DID・capability・governance（PII Tier 3）
 README.edn / migration.edn   ← 機械可読メタデータ（`:canonical-metadata :edn`）
-CLAUDE.md                    ← ⚠ 抽出**前**の系の説明。下記「既知のずれ」参照
+AGENTS.md                    ← ⚠ 抽出**前**の系の説明。下記「既知のずれ」参照
 ```
 
 ### `kotoba/` が固定している不変条件
@@ -68,7 +68,7 @@ CLAUDE.md                    ← ⚠ 抽出**前**の系の説明。下記「既
 
 ### 既知のずれ
 
-- **`CLAUDE.md` は抽出前の系を書いている** —— RisingWave のテーブル、LangGraph の
+- **`AGENTS.md` は抽出前の系を書いている** —— RisingWave のテーブル、LangGraph の
   Python worker、`etzhayyim deploy`、`newsletter.etzhayyim.com` への curl。
   いずれも**この repo には無い**（parent monorepo 側の話）。歴史として残すが、
   ここの操作手順として読まないこと。

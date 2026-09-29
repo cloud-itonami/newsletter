@@ -135,7 +135,7 @@ if (!(await exists(e, ISSUE_COLLECTION, issueRkey(input.issueId)))) {
   `cloud-itonami` に在るので、ここから出すのは別 org の live surface。
   加えて `main` が指す `svelte/.svelte-kit/cloudflare/_worker.js` は
   ビルド生成物で repo に無いため、そもそもビルドを通さないと deploy に届かない。
-- **`CLAUDE.md` の `Deploy` 節を実行しない。** `etzhayyim deploy` も
+- **`AGENTS.md` の `Deploy` 節を実行しない。** `etzhayyim deploy` も
   `python -m kotodama.newsletter_worker_main` も、この repo の外（抽出元の
   monorepo）の話。ここには LangGraph worker も BPMN 契約も無い。
 - **購読者データを扱わない。** email は Tier 3 PII で、`actor-manifest.jsonld`
